@@ -39,7 +39,20 @@ $(function () {
       },
     });
 
-    $('.main-header-btn-down').on( 'click', function(){ 
+    const swiperGallery = new Swiper('.gallery-slider.swiper', {
+
+      pagination: {
+        el: '.gallery-slider .swiper-pagination',
+        clickable: true,
+      },
+    
+      navigation: {
+        nextEl: '.gallery-slider .swiper-button-next',
+        prevEl: '.gallery-slider .swiper-button-prev',
+      },
+    });
+
+    $('.scroll-to').on( 'click', function(){ 
       var el = $(this);
       var dest = el.attr('href'); // получаем направление
       if(dest !== undefined && dest !== '') { // проверяем существование
