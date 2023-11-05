@@ -55,12 +55,64 @@ $(function () {
     $('.scroll-to').on( 'click', function(){ 
       var el = $(this);
       var dest = el.attr('href'); // получаем направление
-      if(dest !== undefined && dest !== '') { // проверяем существование
-          $('html').animate({ 
-            scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
-          }, 700 // скорость прокрутки
-          );
+      if($(dest).length != 0) {
+        if(dest !== undefined && dest !== '') { // проверяем существование
+            $('html').animate({ 
+              scrollTop: $(dest).offset().top // прокручиваем страницу к требуемому элементу
+            }, 700 // скорость прокрутки
+            );
+        }
+        return false;
       }
-      return false;
-  });
+    });
+
+    //Submint from
+    $('.submit-form').on('click', function(event) {
+      event.preventDefault();
+
+      let countErrors = 0;
+      const form = $(this).parents('form');
+      const requiredInputs = $(form).find('.required');
+      const errorMessage = $('.form-error-message');
+
+      $(errorMessage).each(function() {
+        $(this).removeClass('active');
+      })
+
+      $(requiredInputs).each(function() {
+        if($(this).attr('name') === 'name') {
+          if($(this).val() === '') {
+            $('.form-error-message[data-name="name"]').addClass('active'); 
+            countErrors++;
+          }
+        }
+        
+        if($(this).attr('name') === 'email') {
+          if($(this).val() === '') {
+            $('.form-error-message[data-name="email"]').addClass('active'); 
+            countErrors++;
+          }
+        }
+
+        if($(this).attr('name') === 'message') {
+          if($(this).val() === '') {
+            $('.form-error-message[data-name="message"]').addClass('active'); 
+            countErrors++;
+          }
+        }
+
+        if($(this).attr('name') === 'conferm') {
+          if(!$(this).prop('checked')) {
+            $('.form-error-message[data-name="conferm"]').addClass('active'); 
+            countErrors++;
+          }
+        }
+      })
+
+      if(countErrors) {
+        return;
+      }
+
+
+    })
 })

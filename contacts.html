@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Новости</title>
+    <title>Контакты</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="./css/fonts.css">
@@ -11,7 +11,7 @@
 </head>
 <body>
     <div class="content">
-        <section class="header news-header">
+        <section class="header contacts-header">
             <div class="container">
                 <div class="main-header-top white">
                     <ul class="main-header-nav">
@@ -127,52 +127,139 @@
             <div class="container">
                 <div class="breadcrumbs-wrap">
                     <a href="./index.html" class="breadcrumbs-item">Главная</a>
-                    <a href="./news.html" class="breadcrumbs-item">Новости</a>
+                    <a href="./contacts.html" class="breadcrumbs-item">Контакты</a>
                 </div>
             </div>
         </div>
 
-        <section id="first-scroll" class="news">
+        <section id="first-scroll" class="contacts">
             <div class="container">
-                <div class="title">Новости</div>
-                <div class="news-list">
-                    <div class="news-item">
-                        <div class="news-date">22.05.23</div>
-                        <div class="news-title">Компания «Булгаков» получила разрешение на строительство ЖК «Взлетная 16»</div>
-                        <div class="news-text">
-                            <p>Госстройнадзор Ленинградской области, выдал разрешение на строительство жилого комплекса комфорт класса «Взлетая 16».</p>
-                            <p>В составе проекта 68 квартир, подземный паркинг, детское дошкольное учреждение и коммерческие помещения на первом этаже.</p>
-                            <p>Архитектурная концепция разработана бюро «Степ». В отделке фасадов используется керамогранит и алюминиевые витражи.</p>
-                            <p>Отличительной особенностью комплекса является малое количество квартир большого метража от 48 метров, с высотой потока 2.9 метра, концепция «двор без машин»</p>
-                            <p>Строительство проекта запланировано на 2024 г.</p>
+                <div class="title">Контакты</div>
+                <div class="contacts-wrap">
+                    <div class="contacts-info">
+                        <div class="contacts-info-item">
+                            <div class="contacts-info-name">Адрес</div>
+                            <div class="contacts-info-content">199178 Санкт-Петербург , 5-я линия В.О., 70, проходная 4, офис 22-23</div>
+                        </div>
+                        <div class="contacts-info-item">
+                            <div class="contacts-info-name">Телефон</div>
+                            <a href="tel:88123313698" class="contacts-info-content">8 (812) 331-36-98</a>
+                        </div> 
+                        <div class="contacts-info-item">
+                            <div class="contacts-info-name">Телефон</div>
+                            <a href="tel:88123313698" class="contacts-info-content">8 (812) 331-36-98</a>
+                        </div>
+                        <div class="contacts-info-item">
+                            <div class="contacts-info-name">Телефон</div>
+                            <a href="tel:88123313698" class="contacts-info-content">8 (812) 331-36-98</a>
+                        </div>
+                        <div class="contacts-info-item">
+                            <div class="contacts-info-name">Режим работы</div>
+                            <div class="contacts-info-content">с 9:00 до 18:00</div>
+                        </div>
+                        <div class="contacts-info-item">
+                            <div class="contacts-info-name">Соц сети</div>
+                            <div class="contacts-info-content contact-social">
+                                <a href="">
+                                    <img src="./img/inst-icon.svg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="./img/vk-icon.svg" alt="">
+                                </a>
+                                <a href="">
+                                    <img src="./img/th-icon.svg" alt="">
+                                </a>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="news-item">
-                        <div class="news-date">18.02.22</div>
-                        <div class="news-title">Компания «Булгаков» получила положительное заключение экспертизы проектной документации жилого комплекса «Взлетная 16»</div>
+                    <div class="contacts-form-wrap">
+                        <form action="" class="contacts-form">
+                            <div class="subtitle">УТОЧНИТЕ ПОДРОБНОСТИ</div>
+                            <div class="contacts-input-wrap">
+                                <div class="contacts-input-item">
+                                    <div class="form-error-message" data-name="name">Заполните Ваше имя</div>
+                                    <input class="required" type="text" name="name" placeholder="Ваше имя*" required>
+                                </div>
+                                <div class="contacts-input-item">
+                                    <div class="form-error-message" data-name="email">Заполните Вашу почту</div>
+                                    <input class="required" type="email" name="email" placeholder="Ваш email*" required>
+                                </div>
+                                <div class="contacts-input-item">
+                                    <input type="tel" name="tel" placeholder="Ваш телефон">
+                                </div>
+                                <div class="contacts-textarea-item">
+                                    <div class="form-error-message" data-name="message">Заполните это поле</div>
+                                    <textarea class="required" name="message" id="" placeholder="Текст сообщения*" required></textarea>
+                                </div>
+                                <div class="contacts-submit-item">
+                                    <a href="" class="main-bnt submit-form anima-btn">
+                                        Заказать звонок
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="12" viewBox="0 0 26 12" fill="none">
+                                            <path d="M26 6L16 0.226497V11.7735L26 6ZM0 7H17V5H0V7Z" fill="#403333"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                                <div class="form-error-message" data-name="conferm">Поставьте галочку</div>
+                                <div class="contacts-check-item">
+                                    <input class="required" name="conferm" type="checkbox" id="contacts-conferm" required>
+                                    <label for="contacts-conferm">Согласен на обработку <a href="">персональных данных</a></label>
+                                </div>
+                            </div>
+                        </form>
                     </div>
+                </div>
+            </div>
+        </section>
 
-                    <div class="news-item">
-                        <div class="news-date">21.12.21</div>
-                        <div class="news-title">Компания «Булгаков» поздравляет с Новым Годом!</div>
-                        <div class="news-text">
-                            <p>Пусть все невзгоды и трудности останутся позади, а этот год принесет благополучие, яркие идеи и новые победы.</p>
-                            <p>Загадывайте самые заветные желания, они непременно сбудутся!</p>
-                        </div>
+        <section class="map">
+            <div class="container">
+                <img src="./img/contacts/map.png" alt="">
+            </div>
+        </section>
+
+        <section class="requisites">
+            <div class="container">
+                <div class="title">Реквизиты</div>
+                <div class="requisites-wrap">
+                    <div class="requisites-item">
+                        <div class="requisites-name">ИНН</div>
+                        <div class="requisites-descr">7816361822</div>
                     </div>
-
-                    <div class="news-item">
-                        <div class="news-date">28.09.21</div>
-                        <div class="news-title">Проект ЖК «Взлетная 16» находится в стадии прохождения экспертизы. Ждём…</div>
+                    <div class="requisites-item">
+                        <div class="requisites-name">Расчетный счет</div>
+                        <div class="requisites-descr">40702810635000000987</div>
                     </div>
-
-                    <div class="news-item">
-                        <div class="news-date">01.03.21</div>
-                        <div class="news-title">Дорогие женщины! Поздравляем вас с Международным женским днём!</div>
-                        <div class="news-text">
-                            <p>От души желаем вам здоровья, любви и женского счастья!<br> Компания «Булгаков»</p>
-                        </div>
+                    <div class="requisites-item">
+                        <div class="requisites-name">Банк</div>
+                        <div class="requisites-descr">САНКТ-ПЕТЕРБУРГСКИЙ РФ АО "РОССЕЛЬХОЗБАНК"</div>
+                    </div>
+                    <div class="requisites-item">
+                        <div class="requisites-name">КПП</div>
+                        <div class="requisites-descr">781101001</div>
+                    </div>
+                    <div class="requisites-item">
+                        <div class="requisites-name">Генеральный директор</div>
+                        <div class="requisites-descr">Булгаков Сергей Викторович</div>
+                    </div>
+                    <div class="requisites-item">
+                        <div class="requisites-name">Юридический адрес</div>
+                        <div class="requisites-descr">192131, Санкт-Петербург г, Ивановская ул, дом 24, литер А, помещение 11Н, офис 2</div>
+                    </div>
+                    <div class="requisites-item">
+                        <div class="requisites-name">ОГРН</div>
+                        <div class="requisites-descr">1057810067919</div>
+                    </div>
+                    <div class="requisites-item">
+                        <div class="requisites-name">БИК</div>
+                        <div class="requisites-descr">044030910</div>
+                    </div>
+                    <div class="requisites-item">
+                        <div class="requisites-name">ОКПО</div>
+                        <div class="requisites-descr">76151606</div>
+                    </div>
+                    <div class="requisites-item">
+                        <div class="requisites-name">Корр. счет</div>
+                        <div class="requisites-descr">30101810900000000910</div>
                     </div>
                 </div>
             </div>
@@ -234,9 +321,8 @@
                 </div>
             </div>
         </section>
-
     </div>
-    
+
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
