@@ -112,7 +112,9 @@ $(function () {
       if(countErrors) {
         return;
       }
-
-
     })
+
+    Fancybox.bind("[data-fancybox]", {
+      // Your custom options
+    });
 })

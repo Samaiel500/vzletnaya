@@ -142,9 +142,9 @@ body {
     content: ''; 
     position: absolute;
     right: 0; 
-    top: 4px;
-    border: 7px solid transparent;
-    border-top: 9px solid #3C424A;
+    top: 5px;
+    border: 6px solid transparent;
+    border-top: 6px solid #3C424A;
 }
 
 .main-header-top.white .main-header-nav-link.dropdown::before {
@@ -471,12 +471,16 @@ body {
 }
 
 .architect-slider-img {
+    max-width: 947px;
+    width: 100%;
+    height: 600px;
     opacity: 0;
 }
 
 .architect-slider-img img {
-    max-width: 947px;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .architect-slider-text {
@@ -592,12 +596,16 @@ body {
 }
 
 .iandscaping-slider-img {
+    max-width: 550px;
+    width: 100%;
+    height: 600px;
     opacity: 0;
 }
 
 .iandscaping-slider-img img {
-    max-width: 550px;
     width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .swiper-slide-active .iandscaping-slider-text,
@@ -856,7 +864,6 @@ body {
 }
 
 .news-list {
-    max-width: 880px;
     display: flex;
     flex-direction: column;
     gap: 50px;
@@ -1117,30 +1124,58 @@ body {
     margin: 7px 0 0 0;
 }
 
-
-
-
-
-
-
-
-/* @media (min-width: 576px) {
-    .container {
-        max-width: 540px;
-    }
+.paginetions {
+    padding: 0 0 40px 0;
 }
 
-@media (min-width: 768px) {
-    .container {
-        max-width: 720px;
-    }
+.paginetions-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-@media (min-width: 992px) {
-    .container {
-        max-width: 960px;
-    }
-} */
+.paginetions-list-item {
+    width: 30px;
+    height: 30px;
+    border: 2px solid #EAD29E;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.paginetions-list-item.active {
+    border-color: #B3904D;
+}
+
+.paginetions-list-item a {
+    font: 800 16px/1 'Inter', normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: #EAD29E;
+}
+
+.paginetions-list-item.active a {
+    color: #B3904D;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width: 1200px) {
     .container {
@@ -1152,9 +1187,6 @@ body {
     }
 }
 
-
-
-
 @media (max-width: 1825px) {
     .numbers-about {
         width: 500px;
@@ -1162,6 +1194,7 @@ body {
 
     .numbers-about-list {
         grid-template-columns: repeat(2, 1fr);
+        row-gap: 40px;
     }
 
     .numbers {
@@ -1775,6 +1808,11 @@ body {
 
     .plans-room-list {
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    }
+
+    .iandscaping-slider-img,
+    .architect-slider-img {
+        height: auto;
     }
 }
 
