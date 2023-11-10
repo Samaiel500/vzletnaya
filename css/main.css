@@ -343,6 +343,10 @@ body {
     gap: 57px;
 }
 
+.architect-text {
+    font: 400 16px/1.5 'Inter', normal;
+}
+
 .architect-text-img {
     margin-top: 45px;
 }
@@ -705,7 +709,7 @@ body {
     height: 453px;
 }
 
-.header.gallery {
+.header.gallery-header {
     background: url(../img/gallery/header-gallery.png) no-repeat center/cover;
 }
 
@@ -1760,7 +1764,7 @@ body {
         height: 550px;
     }
 
-    .header.gallery {
+    .header.gallery-header {
         background: url(../img/gallery/header-gallery-mob.png) no-repeat center/cover;
     }
 

@@ -22,11 +22,20 @@ $(function () {
         nextEl: '.architect-slider .swiper-button-next',
         prevEl: '.architect-slider .swiper-button-prev',
       },
+
+      breakpoints: {
+        1400: {
+          autoHeight: false,
+        },
+        320: {
+          autoHeight: true,
+        },
+      }
     });
 
     const swiperTwo = new Swiper('.iandscaping.swiper', {
       effect: "fade",
-      autoHeight: true,
+      // autoHeight: true,
 
       pagination: {
         el: '.iandscaping .swiper-pagination',
@@ -37,6 +46,15 @@ $(function () {
         nextEl: '.iandscaping .swiper-button-next',
         prevEl: '.iandscaping .swiper-button-prev',
       },
+
+      breakpoints: {
+        1400: {
+          autoHeight: false,
+        },
+        320: {
+          autoHeight: true,
+        },
+      }
     });
 
     const swiperGallery = new Swiper('.gallery-slider.swiper', {
