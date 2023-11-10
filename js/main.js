@@ -11,7 +11,7 @@ $(function () {
 
     const swiper = new Swiper('.architect-slider.swiper', {
       effect: "fade",
-      autoHeight: true,
+      // autoHeight: true,
 
       pagination: {
         el: '.architect-slider .swiper-pagination',
