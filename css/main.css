@@ -24,7 +24,7 @@ input[type=text]::placeholder,
 input[type=email]::placeholder,
 input[type=tel]::placeholder,
 textarea::placeholder {
-    font: 400 18px/1 'Inter', normal;
+    font: 400 18px/1 'Montserrat', normal;
     color: #B1B1B1;
 }
 
@@ -41,7 +41,7 @@ a:hover {
 }
 
 body {
-    font: 400 16px/1.3 'Inter', normal;
+    font: 400 16px/1.3 'Montserrat', normal;
     color: #3C424A;
 }
 
@@ -62,10 +62,26 @@ body {
     margin: 0 auto;
 }
 
+.main-menu {
+    position: relative;
+    background: #1C1D1C;
+}
+
+.main-menu::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: linear-gradient(90deg, #B08D46 0%, #EAD29E 35.41%, #A7833B 87.24%);
+    width: 100%;
+}
+
 .main-header {
     position: relative;
     overflow: hidden;
-    height: 100vh;
+    height: calc(100vh);
     background: url(../img/main-header/main-bg.png) no-repeat center/cover;
 }
 
@@ -75,25 +91,23 @@ body {
     flex-direction: column;
 }
 
-.main-header-down {
-    position: relative;
-    margin-top: auto;
-}
-
 .main-header::after {
     content: '';
     width: 100%;
-    height: 300px;
+    height: unset;
     position: absolute;
+    top: 0;
     bottom: 0;
     left: 0;
     right: 0;
     opacity: 0.72;
-    background: linear-gradient(0deg, #000 13.4%, rgba(0, 0, 0, 0.00) 100%);
+    background: rgba(28, 29, 28, 0.50);
+    mix-blend-mode: multiply;
 }
 
 .main-header-top {
     position: relative;
+    height: 130px;
     z-index: 10;
     display: flex;
     justify-content: space-between;
@@ -109,9 +123,8 @@ body {
 .main-header-nav-link {
     position: relative;
     padding: 0 0 3px 0;
-    font: 600 14px/1 'Inter', normal;
-    color: #3C424A;
-    text-transform: uppercase;
+    font: 600 14px/1 'Montserrat', normal;
+    color: #FFF;
     transition: all .3s ease;
 }
 
@@ -124,7 +137,7 @@ body {
     width: 0%;
     height: 2px;
     border-radius: 3px;
-    background-color: #3C424A;
+    background-color: #FFF;
     transition: all .3s ease;
 }
 
@@ -144,7 +157,11 @@ body {
     right: 0; 
     top: 5px;
     border: 6px solid transparent;
-    border-top: 6px solid #3C424A;
+    border-top: 6px solid #FFF;
+}
+
+.main-header-nav-text {
+    display: none;
 }
 
 .main-header-top.white .main-header-nav-link.dropdown::before {
@@ -152,59 +169,63 @@ body {
     border-top: 6px solid #FFFFFF;
 }
 
+.main-header-nav-link:hover {
+    color: #FFFFFF;
+}
+
 .main-header-nav-link:hover::after  {
     width: 100%;
 }
 
-.main-header-logo.mob {
-    display: none;
+.main-header-tel {
+    font: 600 16px/1 'Montserrat', normal;
+    color: #FFF;
 }
 
-.main-header-tel {
-    font: 600 16px/1 'Inter', normal;
-    color: #3C424A;
+.main-header-tel:hover {
+    color: #FFFFFF;
 }
 
 .main-header-name {
     position: relative;
+    text-align: center;
 }
 
 .main-header-name img {
     position: relative;
     z-index: 2;
+    margin-top: 110px;
 }
 
-.main-header-name::after {
-    content: '';
-    z-index: 1;
-    position: absolute;
-    top: 0;
-    left: 0;
-    border-radius: 858px;
-    background: rgba(255, 255, 255, 0.70);
-    filter: blur(77px);
-    display: inline-block;
-    max-width: 500px;
+.header-btn-wrap {
+    margin-top: 95px;
+    display: flex;
+    gap: 25px;
     width: 100%;
-    height: 300px;
-    transform: rotate(-6.478deg);
-    flex-shrink: 0;
+    align-items: center;
+    flex-direction: column;
 }
 
 .main-bnt {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    text-align: center;
     position: relative;
     z-index: 2;
-    padding: 17px 22px 18px 21px;
-    background: linear-gradient(134deg, #B08D46 -27.74%, #EAD29E 55.85%, #A7833B 133.03%);
-    box-shadow: 0px 3px 0px 0px #69573C;
-    font: 600 18px/1 'Inter', normal;
-    color: #403333;
-    letter-spacing: 2.7px;
+    padding: 17px 29px;
+    border-radius: 5px;
+    border: 1px solid #B08D46;
+    background: #1C1D1C;
+    font: 400 20px/1.3 'Montserrat', normal;
+    color: #FFF;
+    letter-spacing: 1.4px;
     text-transform: uppercase;
     overflow: hidden;
+}
+
+.main-bnt:hover {
+    color: #FFF;
 }
 
 .anima-btn::before {
@@ -214,7 +235,7 @@ body {
     top: 0;
     width: 30px;
     height: 100%;
-    background-color: rgba(255, 255, 255, .6);
+    background-color: rgba(214, 175, 0, 0.6);
     transform: translateX(-80px) skewX(-45deg);
     animation: btn-blick 5s infinite;
 }
@@ -231,20 +252,20 @@ body {
     }
 }
 
-.main-bnt.w-400 {
-    max-width: 400px;
+.main-bnt.w-336 {
+    max-width: 336px;
     width: 100%;
 }
 
-.main-bnt.btn-header {
-    margin: 50px 0 0 77px;
+.main-header-text {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    margin-top: 120px;
 }
 
-.main-header-text {
-    position: absolute;
-    z-index: 3;
-    bottom: 40px;
-    right: 50px;
+.main-header-text .mob {
+    display: none;
 }
 
 .main-header-btn-down {
@@ -301,7 +322,7 @@ body {
 
 .mobile-menu-link {
     display: inline-block;
-    font: 600 14px/1 'Inter', normal;
+    font: 600 14px/1 'Montserrat', normal;
     color: #FFFFFF;
     text-transform: uppercase;
 }
@@ -319,8 +340,7 @@ body {
 }
 
 .title {
-    font: 800 64px/1.1 'Inter', normal;
-    text-align: center;
+    font: 800 96px/1.1 'Montserrat', normal;
     text-transform: uppercase;
     background: linear-gradient(94deg, #A68039 0%, #EAD29E 28.54%, #AC8741 53.29%, #F8E3B3 76.81%, #B3904D 98.69%);
     background-clip: text;
@@ -328,8 +348,12 @@ body {
     -webkit-text-fill-color: transparent;
 }
 
+.title.title-right {
+    text-align: right;
+}
+
 .subtitle {
-    font: 800 36px/1.1 'Inter', normal;
+    font: 800 36px/1.1 'Montserrat', normal;
     text-transform: uppercase;
     background: linear-gradient(94deg, #A68039 2.36%, #EAD29E 30.38%, #AC8741 54.69%, #F8E3B3 77.79%, #B3904D 99.27%);
     background-clip: text;
@@ -344,11 +368,31 @@ body {
 }
 
 .architect-text {
-    font: 400 16px/1.5 'Inter', normal;
+    font: 400 16px/1.5 'Montserrat', normal;
 }
 
-.architect-text-img {
-    margin-top: 45px;
+.architect-text p:last-child {
+    margin-bottom: 0;
+}
+
+.architect-img-descr-wrap {
+    position: relative;
+}
+
+.architect-img-descr {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 40px;
+    width: 100%;
+    background: linear-gradient(90deg, #B08D46 0%, #EAD29E 35.41%, #A7833B 87.24%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font: 600 12px/1.2 'Montserrat', normal;
+    color: #0C0C0C;
+    text-align: center;
 }
 
 .content-wrap {
@@ -359,57 +403,95 @@ body {
 }
 
 .numbers {
-    padding: 105px 0 103px 0;
+    position: relative;
+    overflow: hidden;
+    margin: 50px 0;
+    padding-top: 80px;
+    background: #1C1D1C;
+    height: 836px;
 }
 
-.numbers-wrap {
-    margin: 69px 0 0 0;
-    display: flex;
+.numbers-left {
+    width: 60%;
 }
 
-.numbers-about {
-    max-width: 750px;
+.numbers-info-circle {
+    z-index: 1;
+    position: absolute;
+    right: 44%;
+    top: 50%;
+    transform: translate(0, -50%);
+    background: #1C1D1C;
+    border-radius: 1174px;
+    height: 1174px;
+    width: 1174px;
 }
 
-.numbers-about-list {
+.numbers-info-wrap {
+    position: relative;
+    z-index: 2;
+}
+
+.numbers-info {
+    max-width: 570px;
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 45px;
+    padding: 35px 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    row-gap: 70px;
+    row-gap: 20px;
+    column-gap: 30px;
 }
 
-.numbers-about-list-num {
-    font: 900 64px/1 'Inter', normal;
-    text-align: center;
+.numbers-info::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #B08D46 0%, #EAD29E 35.41%, #A7833B 87.24%);
+}
+
+.numbers-info::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, #B08D46 0%, #EAD29E 35.41%, #A7833B 87.24%);
+}
+
+.numbers-info-num {
+    font: 800 62px/1 'Montserrat', normal;
     text-transform: uppercase;
-    background: linear-gradient(95deg, #B08D46 0%, #EAD29E 51.69%, #A7833B 99.42%);
+    background: linear-gradient(90deg, #B08D46 0%, #EAD29E 35.41%, #A7833B 87.24%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.numbers-about-list-text {
-    font: 400 24px/1.1 'Inter', normal;
-    text-align: center;
-    text-transform: lowercase;
+.numbers-info-text {
+    font: 400 17px/1.1 'Montserrat', normal;
+    color: #FFF;
 }
 
-.numbers-img {
+.numbers-right {
     position: absolute;
-    top: 240px;
     right: 0;
+    top: 0;
 }
 
-.numbers-img-text{
-    margin: 70px 0 0 0;
-    text-align: center;
-}
-
-.numbers-img-text.mob {
+.numbers-info-img .mob {
     display: none;
 }
 
 .location-map {
-    padding: 105px 0 0 0;
+    padding: 85px 0 0 0;
 }
 
 .location-map-img {
@@ -422,7 +504,7 @@ body {
 }
 
 .plan-diagram {
-    padding: 105px 0 0 0;
+    padding: 105px 0 80px 0;
 }
 
 .plan-diagram-wrap {
@@ -432,7 +514,7 @@ body {
 .plan-diagram-img-right {
     position: absolute;
     right: 0;
-    top: 220px;
+    bottom: 80px;
 }
 
 .advantages {
@@ -444,13 +526,13 @@ body {
     margin: 59px 0 0 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    column-gap: 50px;
+    column-gap: 60px;
 }
 
 .advantages-item {
     position: relative;
     padding: 12px 0 0 0;
-    font: 300 13px/1.1 'Inter', normal;
+    font: 400 15px/1.25 'Montserrat', normal;
     color: #D9D9D9;
     text-transform: uppercase;
 }
@@ -475,16 +557,33 @@ body {
 }
 
 .architect-slider-img {
+    position: relative;
     max-width: 947px;
     width: 100%;
     height: 600px;
     opacity: 0;
 }
 
+.architect-slider-img::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(215deg, #FFF 19.1%, rgba(255, 255, 255, 0.00) 54.6%);
+}
+
 .architect-slider-img img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.architect-slider-text-img.mob {
+    display: none;
 }
 
 .architect-slider-text {
@@ -496,7 +595,7 @@ body {
 }
 
 .architect-slider-text p {
-    font: 400 18px/1.7 'Inter', normal;
+    font: 400 16px/1.25 'Montserrat', normal;
 }
 
 .swiper-slide-active .architect-slider-text,
@@ -508,9 +607,11 @@ body {
     display: none;
 }
 
-.title-slider {
-    margin: 0 0 25px 0;
-    text-align: left;
+.architect-slider-text .title-slider {
+    position: relative;
+    z-index: 3;
+    margin: 0 0 25px -330px;
+    text-align: right;
 }
 
 .swiper-button-next,
@@ -576,7 +677,15 @@ body {
 }
 
 .content-wrap.pt20 {
-    padding: 20px 0 120px 0;
+    padding: 240px 0 120px 0;
+}
+
+.iandscaping {
+    padding: 110px 0 0 0;
+}
+
+.iandscaping.swiper {
+    overflow: visible;
 }
 
 .iandscaping-slider-item {
@@ -585,22 +694,23 @@ body {
 }
 
 .iandscaping-slider-text {
-    max-width: 880px;
+    max-width: 550px;
     width: 100%;
     margin: 0 100px 0 0;
 }
 
 .iandscaping-slider-text {
+    position: relative;
     opacity: 0;
     padding: 0 15px 50px 15px;
 }
 
 .iandscaping-slider-text p {
-    font: 400 18px/1.7 'Inter', normal;
+    font: 400 16px/1.25 'Montserrat', normal;
 }
 
 .iandscaping-slider-img {
-    max-width: 550px;
+    max-width: 880px;
     width: 100%;
     height: 600px;
     opacity: 0;
@@ -610,6 +720,19 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.iandscaping .title-slider {
+    text-align: left;
+    position: absolute;
+}
+
+.iandscaping .title-slider.row-2 {
+    top: -230px;
+}
+
+.iandscaping .title-slider.row-1 {
+    top: -130px;
 }
 
 .swiper-slide-active .iandscaping-slider-text,
@@ -628,9 +751,21 @@ body {
 }
 
 .footer {
+    position: relative;
     margin-top: auto;
-    padding: 20px 0 80px 0;
+    padding: 20px 0 50px 0;
     background: #000;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 6px;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #B08D46 0%, #EAD29E 35.41%, #A7833B 87.24%);
 }
 
 .footer-top {
@@ -643,6 +778,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 40px;
+    padding-top: 30px;
 }
 
 .footer-menu-list {
@@ -652,7 +788,7 @@ body {
 }
 
 .footer-menu-list a {
-    font: 400 11px/1.1 'Inter', normal;
+    font: 400 11px/1.1 'Montserrat', normal;
     color: #FFF;
 }
 
@@ -660,17 +796,21 @@ body {
     text-transform: uppercase;
 }
 
+.footer-contacts {
+    padding-top: 30px;
+}
+
 .footer-contacts a {
     color: #FFFFFF;
 }
 
 .footer-contacts-tel {
-    font: 400 16px/1.1 'Inter', normal;
+    font: 400 16px/1.1 'Montserrat', normal;
     text-transform: uppercase;
 }
 
 .footer-contacts-email {
-    font: 400 13px/1.1 'Inter', normal;
+    font: 400 13px/1.1 'Montserrat', normal;
     text-transform: lowercase;
 }
 
@@ -682,14 +822,20 @@ body {
 }
 
 .footer-contacts-politic {
-    font: 400 11px/1.1 'Inter', normal;
-    color: #FFFFFF;
+    font: 400 11px/1.1 'Montserrat', normal;
     margin: 15px 0 0 0;
+    background: linear-gradient(90deg, #B08D46 0%, #EAD29E 35.41%, #A7833B 87.24%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .footer-ritail {
-    font: 400 11px/1.1 'Inter', normal;
-    color: #A68039;
+    font: 400 11px/1.1 'Montserrat', normal;
+    background: linear-gradient(90deg, #B08D46 0%, #EAD29E 35.41%, #A7833B 87.24%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center;
     margin: 50px 0 0 0;
 }
@@ -706,7 +852,7 @@ body {
 
 .header {
     position: relative;
-    height: 453px;
+    height: 320px;
 }
 
 .header.gallery-header {
@@ -741,11 +887,8 @@ body {
     top: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.70);
-}
-
-.header.plans-header::after {
-    display: none;
+    background: rgba(28, 29, 28, 0.50);
+    mix-blend-mode: multiply;
 }
 
 .main-header-top.white a {
@@ -755,8 +898,10 @@ body {
 .header-down {
     max-width: 1170px;
     width: 100%;
+    z-index: 4;
     position: absolute;
-    bottom: 0;
+    bottom: 50%;
+    transform: translateY(50%);
 }
 
 .header-down-btn {
@@ -769,7 +914,7 @@ body {
 .header-down-img {
     position: absolute;
     z-index: 2;
-    bottom: 20px;
+    bottom: 0;
     right: 30px;
 }
 
@@ -795,7 +940,7 @@ body {
 
 .breadcrumbs-item {
     position: relative;
-    font: 400 16px/1.3 'Inter', normal;
+    font: 400 16px/1.3 'Montserrat', normal;
     color: #3C424A;
 }
 
@@ -819,24 +964,23 @@ body {
 }
 
 .gallery {
-    padding: 20px 0 80px 0;
+    padding: 20px 0 0 0;
 }
 
 .gallery.first {
-    padding: 20px 0 50px 0;
+    padding: 20px 0 0 0;
 }
 
 .gallery-text {
-    font: 500 24px/1.2 'Inter', normal;
+    font: 400 16px/1.25 'Montserrat', normal;
     color: #3C424A;
-    text-align: center;
-    max-width: 955px;
+    max-width: 560px;
     width: 100%;
-    margin: 10px auto 0 auto;
+    margin-top: 10px;
 }
 
 .gallery-slider {
-    margin: 40px 0 40px 0;
+    margin: 40px -45px 40px -45px;
 }
 
 .gallery-slider-item {
@@ -849,22 +993,21 @@ body {
 }
 
 .gallery-about {
-    padding: 0 50px 0 50px;
     max-width: 980px;
     width: 100%;
 }
 
 .gallery-descr {
-    font: 400 18px/1.7 'Inter', normal;
+    font: 400 16px/1.25 'Montserrat', normal;
     margin: 23px 0 0 0;
 }
 
-.gallery-descr p:last-child {
+.gallery-descr p {
     margin: 0;
 }
 
 .news {
-    padding: 20px 0 120px 0;
+    padding: 20px 0 40px 0;
 }
 
 .news-list {
@@ -875,88 +1018,37 @@ body {
 }
 
 .news-date {
-    font: 400 18px/1.1 'Inter', normal;
+    position: relative;
+    display: inline-block;
+    padding-top: 10px;
+    font: 400 20px/1.1 'Montserrat', normal;
     color: #B1B1B1;
     margin: 0 0 10px 0;
 }
 
+.news-date::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 2px;
+    border: 0px solid #000;
+    background: linear-gradient(90deg, #B08D46 0%, #EAD29E 35.41%, #A7833B 87.24%);
+}
+
 .news-title {
-    font: 600 20px/1.5 'Inter', normal;
+    font: 600 17px/1.5 'Montserrat', normal;
     margin: 0 0 15px 0;
 }
 
 .news-text {
-    font: 400 18px/1.5 'Inter', normal;
+    font: 400 17px/1.4 'Montserrat', normal;
 }
 
 .news-text p:last-child {
     margin: 0;
-}
-
-.premises {
-    padding: 0 0 120px 0;
-}
-
-.premises-item {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 120px;
-    margin: 45px 0 0 0;
-
-}
-
-.premises-item-about {
-    padding: 0 20px;
-    max-width: 720px;
-    width: 100%;
-}
-
-.premises-item-text {
-    font: 400 18px/1.7 'Inter', normal;
-    margin: 30px 0 0 0;
-}
-
-.premises-item-text p:last-child {
-    margin: 0;
-}
-
-.premises-item-title {
-    font: 600 22px/1.2 'Inter', normal;
-    margin: 30px 0 17px 0;
-}
-
-.premises-item-list {
-    font: 400 18px/1.5 'Inter', normal;
-}
-
-.premises-item-list li:not(:last-child) {
-    margin: 0 0 15px 0;
-}
-
-.premises-item-list li {
-    position: relative;
-    padding: 0 0 0 21px;
-}
-
-.premises-item-list li:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background: linear-gradient(146deg, #B08D46 -12%, #E1C280 55.59%, #A7833B 118%), #D9D9D9;;
-}
-
-.premises-item:nth-child(even) {
-    justify-content: flex-start;
-}
-
-.premises-item:nth-child(even) .premises-item-img {
-    order: -1;
 }
 
 .contacts {
@@ -978,13 +1070,13 @@ body {
 }
 
 .contacts-info-name {
-    font: 400 18px/1 'Inter', normal;
+    font: 400 17px/1 'Montserrat', normal;
     color: #B1B1B1;
     margin: 0 0 10px 0;
 }
 
 .contacts-info-content {
-    font: 600 20px/1.5 'Inter', normal;
+    font: 400 17px/1.5 'Montserrat', normal;
     color: #3C424A;
 }
 
@@ -995,16 +1087,15 @@ body {
 }
 
 .contacts-form {
-    padding: 36px 30px 46px 30px;
+    padding: 5px;
     max-width: 480px;
     width: 100%;
-    border: 1px solid #D9D9D9;
 }
 
 .form-error-message {
     display: none;
     margin: 0 0 5px 0;
-    font: 400 16px/1 'Inter', normal;
+    font: 400 16px/1 'Montserrat', normal;
     color: red;
 }
 
@@ -1021,7 +1112,7 @@ body {
 }
 
 .contacts-submit-item {
-    margin: 30px 0 30px 0;
+    margin: 45px 0 45px 0;
 }
 
 .contacts-textarea-item textarea {
@@ -1033,7 +1124,7 @@ body {
     display: flex;
     align-items: flex-start;
     gap: 10px;
-    font: 400 14px/1 'Inter', normal;
+    font: 400 14px/1 'Montserrat', normal;
     color: #3C3C3B;
 }
 
@@ -1044,6 +1135,16 @@ body {
 .contacts-check-item a {
     color: #A7813B;
     text-decoration: underline;
+}
+
+.contact-bnt {
+    font: 500 14px/1 'Montserrat', normal;
+    color: #1C1C1C;
+    text-transform: uppercase;
+    padding: 10px 21px;
+    border-radius: 5px;
+    border: 0px solid #B08D46;
+    background: linear-gradient(90deg, #B08D46 0%, #EAD29E 35.41%, #A7833B 87.24%);
 }
 
 .map {
@@ -1066,36 +1167,40 @@ body {
 }
 
 .requisites-name {
-    font: 400 18px/1.1 'Inter', normal;
+    font: 400 17px/1.1 'Montserrat', normal;
     color: #B1B1B1;
 }
 
 .requisites-descr {
     margin: 10px 0 0 0;
-    font: 600 20px/1.1 'Inter', normal;
+    font: 400 17px/1.1 'Montserrat', normal;
 }
 
 .plans {
-    padding: 0 0 120px 0;
+    padding: 0 0 30px 0;
 }
 
 .plans-text {
-    font: 500 22px/1.2 'Inter', normal;
+    display: flex;
+    justify-content: space-between;
+    font: 600 36px/1.2 'Montserrat', normal;
+    color: #3C424A;
     text-align: center;
     margin: 17px 0 40px 0;
 }
 
-.plans-general-img {
+.plans-general-img,
+.plans-general-info {
     text-align: center;
 }
 
-.plans-general-img img {
-    max-width: 800px;
+.plans-general-img img,
+.plans-general-info img {
+    max-width: 900px;
     width: 100%;
 }
 
 .plans-room-list {
-    margin: 80px 0 0 0;
     display: grid;
     grid-template-columns: repeat(auto-fill, 360px);
     gap: 20px;
@@ -1104,6 +1209,7 @@ body {
 
 .plans-room-item {
     border: 1px solid #D9D9D9;
+    background: #FFFFFF;
 }
 
 .plans-room-img {
@@ -1114,18 +1220,26 @@ body {
 }
 
 .plans-room--info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     border-top: 1px solid #D9D9D9;
-    padding: 17px 20px 25px 31px;
+    padding: 17px 5px 25px 31px;
 }
 
 .plans-room-title {
-    font: 700 22px/1.2 'Inter', normal;
+    font: 700 22px/1.2 'Montserrat', normal;
 }
 
 .plans-room-num {
-    font: 400 18px/1.2 'Inter', normal;
+    font: 400 18px/1.2 'Montserrat', normal;
     color: #8C8C8C;
     margin: 7px 0 0 0;
+}
+
+.plans-apartment {
+    background: #EBEAEA;
+    padding: 60px 0 80px 0;
 }
 
 .paginetions {
@@ -1141,7 +1255,7 @@ body {
 }
 
 .paginetions-link-item {
-    font: 800 16px/1 'Inter', normal;
+    font: 800 16px/1 'Montserrat', normal;
     text-align: center;
     text-transform: uppercase;
     color: #EAD29E;
@@ -1176,6 +1290,79 @@ body {
     background: url(../img/swiper-btn-next.svg) no-repeat center/cover;
 }
 
+.header-down-img .mob {
+    display: none;
+}
+
+.premises-general {
+    padding-bottom: 120px;
+}
+
+.premises-general-img {
+    margin-top: 100px;
+    text-align: center;
+}
+
+.premises-general-img img {
+    width: 100%;
+}
+
+.premises-apartment {
+    padding-top: 115px;
+    padding-bottom: 70px;
+    background: #EBEAEA;
+}
+
+.premises-apartment-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 360px);
+    column-gap: 20px;
+    row-gap: 65px;
+    justify-content: center;
+}
+
+.premises-apartment-item {
+    background: #FFFFFF;
+    border: 1px solid #D9D9D9;
+}
+
+.premises-apartment-item-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    height: 380px;
+    border-bottom: 1px solid #D9D9D9;;
+}
+
+.premises-apartment-item-top img {
+    max-width: 100%;
+}
+
+.premises-apartment-item-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 13px 10px 10px 35px;
+}
+
+.premises-apartment-item-info {
+    font: 700 20px/1 'Montserrat', normal;
+    color: #1C1D1C;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.premises-apartment-item-text {
+    font-size: 17px;
+}
+
+.premises-apartment-item-about {
+    font-weight: 400;
+    font-size: 17px;
+}
+
 
 
 
@@ -1204,23 +1391,6 @@ body {
 }
 
 @media (max-width: 1825px) {
-    .numbers-about {
-        width: 500px;
-    }
-
-    .numbers-about-list {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 40px;
-    }
-
-    .numbers {
-        padding: 105px 0 0 0;
-    }
-
-    .plan-diagram-img-right {
-        top: 260px;
-    }
-
     .plan-diagram-img-right img {
         width: 750px;
     }
@@ -1273,67 +1443,46 @@ body {
     }
 
     .architect-slider-text-img {
-        margin: 0 0 20px 0;
+        margin: 0 0 40px 0;
     }
 
     .iandscaping-slider-img {
         order: -1;
     }
 
-    .premises-item {
-        flex-direction: column;
-        justify-content: space-between;
-        gap: 25px;
+    .iandscaping {
+        padding: 0;
+        margin-top: 20px;
     }
 
-    .premises-item-img {
-        order: -12;
-    }
-
-    .premises-item-img img {
-        max-width: 100%;
-        width: 100%;
+    .content-wrap.pt20 {
+        padding: 100px 0;
     }
 }
 
 @media (max-width: 1345px) {
-    .numbers-wrap {
-        flex-direction: column;
-    }
-
-    .numbers-about {
-        max-width: 100%;
-        width: 100%;
-        margin: 0 0 20px 0;
-    }
-
-    .numbers-about-list {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .numbers-img {
-        position: static;
-        text-align: center;
-    }
-
-    .numbers-img-text.desc {
-        display: none;
-    }
-
-    .numbers-img-text.mob {
-        display: block;
-    }
-
-    .numbers-img-text {
-        margin: 20px 0 0 0;
-    }
-
-    .plan-diagram-img-right {
-        top: 340px;
-    }
-
     .plan-diagram-img-right img {
         width: 600px;
+    }
+
+    .gallery-btn-slider-wrap .swiper-pagination-bullets.swiper-pagination-horizontal {
+        width: unset;
+        margin-bottom: 20px;
+    }
+
+    .gallery-btn-slider-wrap {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .gallery-btn-slider-wrap .swiper-button-prev {
+        order: -1;
+    }
+
+    .gallery-btn-slider-wrap div {
+        position: static;
     }
 }
 
@@ -1344,7 +1493,8 @@ body {
         display: none;
     }
 
-    .header-bnt-menu {
+    .header-bnt-menu,
+    .main-header-nav-text {
         display: block;
     }
 
@@ -1360,7 +1510,6 @@ body {
     }
 
     .architect,
-    .numbers,
     .location-map,
     .plan-diagram,
     .content-wrap.pt105 {
@@ -1385,13 +1534,33 @@ body {
     }
 
     .content-wrap.pt20 {
-        padding: 20px 0 60px 0;
+        padding: 40px 0 60px 0;
+    }
+
+    .numbers .title {
+        font-size: 76px;
+    }
+
+    .numbers-info {
+        max-width: 460px;
+    }
+
+    .numbers-info-img img {
+        width: 450px;
+    }
+
+    .title-iandscaping {
+        font-size: 80px;
+    }
+
+    .gallery .title {
+        font-size: 90px;
     }
 }
 
 @media (max-width: 991px) {
     .title {
-        font-size: 56px;
+        font-size: 56px !important;
     }
 
     .main-header-text img {
@@ -1400,10 +1569,6 @@ body {
 
     .main-header-btn-down img {
         width: 70px;
-    }
-
-    .numbers-img img {
-        max-width: 100%;
     }
 
     .advantages-wrap {
@@ -1434,11 +1599,76 @@ body {
     .requisites-wrap {
         grid-template-columns: 1fr 1fr;
     }
+
+    .numbers {
+        padding-top: 25px;
+        height: unset;
+    }
+
+    .numbers-wrap {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .numbers-right {
+        position: static;
+        margin: 0 -20px;
+    }
+
+    .numbers-right img {
+        width: 100%;
+    }
+
+    .numbers-left {
+        width: 100%;
+    }
+
+    .numbers-info {
+        max-width: 100%;
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    .numbers-info-circle,
+    .header-name-img {
+        display: none;
+    }
+
+    .numbers-info-img {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .header-down-img {
+        position: static;
+        text-align: center;
+    }
 }
 
 @media (max-width: 767px) {
+    .main-header-top {
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 35px;
+        height: 220px;
+    }
+
+    .main-header-logo {
+        margin-top: 30px;
+    }
+
+    .header-bnt-menu {
+        position: absolute;
+        top: 30px;
+        right: 10px;
+    }
+
     .title {
-        font-size: 40px;
+        font-size: 40px !important;
+    }
+
+    .title.title-right {
+        text-align: left;
     }
 
     .architect-wrap {
@@ -1447,24 +1677,14 @@ body {
         gap: 30px;
     }
 
-    .numbers-wrap {
-        margin: 25px 0 0 0;
-    }
-
-    .numbers-img {
-        margin: 0 -20px;
-    }
-
     .footer-logo,
     .header-down-btn,
-    .breadcrumbs,
-    .gallery-slider .swiper-button-prev, 
-    .gallery-slider .swiper-button-next {
+    .breadcrumbs {
         display: none;
     }
 
     .gallery {
-        padding: 50px 0 60px 0;
+        padding: 20px 0 0 0;
     }
 
     .gallery-slider {
@@ -1472,7 +1692,7 @@ body {
     }
 
     .gallery-text {
-        font-size: 18px;
+        font-size: 12px;
     }
 
     .gallery-slider-item {
@@ -1484,8 +1704,8 @@ body {
     }
 
     .gallery-descr {
-        font-size: 16px;
-        line-height: 1.5;
+        font-size: 12px;
+        line-height: 1.3;
     }
 
     .gallery.first {
@@ -1493,28 +1713,12 @@ body {
     }
 
     .news {
-        padding: 55px 0 60px 0;
+        padding: 55px 0 40px 0;
     }
 
     .news-list {
         padding: 20px 0 0 0;
         gap: 35px;
-    }
-
-    .premises {
-        padding: 55px 0;
-    }
-
-    .premises-item-text {
-        margin: 15px 0 0 0;
-    }
-
-    .premises-item-title {
-        margin: 15px 0 10px 0;
-    }
-
-    .premises {
-        padding: 0 0 60px 0;
     }
 
     .contacts-wrap {
@@ -1539,7 +1743,10 @@ body {
     }
 
     .contacts .subtitle {
-        font-size: 24px;
+        font-size: 18px;
+    }
+
+    .contacts-submit-item {
         text-align: center;
     }
     
@@ -1556,6 +1763,17 @@ body {
         padding: 0 0 60px 0;
     }
 
+    .map-wrap {
+        height: 360px;
+        width: 100%;
+    }
+
+    .map-wrap img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
     .requisites {
         padding: 0 0 60px 0;
     }
@@ -1569,11 +1787,51 @@ body {
     }
 
     .plans {
-        padding: 55px 0 60px 0;
+        padding: 55px 0 30px 0;
     }
 
-    .plans-room-list {
-        margin: 25px 0 0 0;
+    .architect-slider-text-img {
+        display: none;
+    }
+
+    .architect-slider-text-img.mob {
+        text-align: center;
+        display: inline-block;
+        margin: 10px 0 0 0 ;
+    }
+
+    .architect-slider-text-img.mob img {
+        max-width: 90%;
+    }
+
+    .title-architect {
+        text-align: center;
+    }
+
+    .plans-text,
+    .plans-room-num {
+        font-size: 17px;
+    }
+
+    .plans-room-title {
+        font-size: 20px;
+    }
+
+    .premises-general {
+        padding-top: 50px;
+        padding-bottom: 30px;
+    }
+
+    .premises-general-img {
+        margin-top: 50px;
+    }
+
+    .premises-apartment {
+        padding-top: 50px;
+    }
+
+    .premises-apartment-list {
+        row-gap: 25px;
     }
 }
 
@@ -1582,21 +1840,8 @@ body {
         width: 250px;
     }
 
-    .main-bnt.btn-header {
-        margin: 20px 0 0 0;
-    }
-
-    .main-bnt.w-400 {
-        max-width: 330px;
-    }
-
     .main-header-text img {
         width: 250px;
-    }
-
-    .main-header-name::after {
-        max-width: 280px;
-        height: 165px;
     }
 }
 
@@ -1609,36 +1854,25 @@ body {
 
 @media (max-width: 575px) {
     .title {
-        font-size: 24px;
+        font-size: 35px !important;
     }
 
-    .main-header {
-        background: url(../img/main-header/mobile-main-bg.png) no-repeat center/cover;
-    }
-
-    .main-header::after {
-        top: 0;
-        height: inherit;
-        opacity: unset;
-        background: rgba(0, 0, 0, 0.70);
-    }
-
-    .main-header-name::after,
     .main-header-btn-down,
-    .main-header-logo.desc,
     .main-header-text.desc,
-    .architect-text-img {
+    .main-header-name {
         display: none;
     }
 
-    .main-header-text.mob,
-    .main-header-logo.mob {
+    .main-header-text.mob {
         display: inline-block;
     }
 
     .main-header-top {
-        padding-top: 20px;
         z-index: 4;
+    }
+
+    .main-header-logo img {
+        width: 144px;
     }
 
     .header-bnt-menu, 
@@ -1653,20 +1887,11 @@ body {
         width: 80%;
     }
 
-    .main-bnt.w-400 {
-        width: 100%;
-    }
-
-    .main-bnt.btn-header {
-        margin: 50px auto;
-    }
-
     .header-bnt-menu:hover {
         color: #FFFFFF;
     }
 
     .architect,
-    .numbers,
     .location-map,
     .plan-diagram,
     .content-wrap.pt105 {
@@ -1674,27 +1899,7 @@ body {
     }
 
     .architect-text p {
-        margin: 0;
-        font-size: 13px;
-    }
-
-    .numbers-about-list {
-        grid-template-columns: repeat(2, 1fr);
-        row-gap: 10px;
-        column-gap: 20px;
-    }
-
-    .numbers-img-text img {
-        max-width: 100%;
-    }
-
-    .numbers-about-list-text {
-        font-size: 22px;
-    }
-
-    .numbers-about-list-text,
-    .numbers-about-list-num {
-        text-align: left;
+        font-size: 12px;
     }
 
     .plan-diagram-img-left {
@@ -1706,7 +1911,29 @@ body {
     }
 
     .advantages {
+        position: relative;
         padding: 30px 0 30px 0;
+        background: #1C1D1C;
+    }
+
+    .advantages::before {
+        content: '';
+        height: 6px;
+        width: 100%;
+        background: linear-gradient(90deg, #B08D46 0%, #EAD29E 35.41%, #A7833B 87.24%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+    }
+
+    .advantages-item {
+        font: 400 10px/1.15 'Montserrat', normal;
+    }
+
+    .advantages-item::before {
+        height: 2px;
+        width: 38px;
     }
 
     .plan-diagram-wrap,
@@ -1714,9 +1941,8 @@ body {
         margin: 35px 0 0 0;
     }
 
-    .architect-slider-text-img img {
-        max-width: 100%;
-        width: 100%;
+    .footer {
+        background: #1C1D1C;
     }
 
     .footer-top {
@@ -1752,16 +1978,41 @@ body {
         margin: 0 0 15px 0;
     }
 
+    .footer-menu-list {
+        position: relative;
+        padding-top: 10px;
+    }
+
+    .footer-menu-list::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 38px;
+        height: 2px;
+        background: linear-gradient(90deg, #B08D46 0%, #EAD29E 35.41%, #A7833B 87.24%);
+    }
+
     .header-down-img img {
         max-width: 100%;
     }
 
     .header-middle-wrap {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 60px;
+    }
+
+    .header-down {
+        position: relative;
+        margin-top: 20px;
     }
 
     .header {
-        height: 550px;
+        height: 460px;
     }
 
     .header.gallery-header {
@@ -1797,15 +2048,17 @@ body {
     }
 
     .news-date,
-    .news-title,
-    .news-text,
-    .premises-item-text,
-    .premises-item-list {
+    .news-text {
         font-size: 16px;
     }
 
     .news-title {
+        font-size: 12px;
         margin: 0 0 10px 0;
+    }
+
+    .news-text {
+        font-size: 12px;
     }
 
     .news-text p {
@@ -1822,7 +2075,8 @@ body {
         width: 100%;
     }
 
-    .plans-room-list {
+    .plans-room-list,
+    .premises-apartment-list {
         grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     }
 
@@ -1830,22 +2084,52 @@ body {
     .architect-slider-img {
         height: auto;
     }
+
+    .main-bnt {
+        font-size: 14px;
+        padding: 17px 10px;
+    }
+
+    .main-bnt.w-336 {
+        width: 211px;
+    }
+
+    .numbers-info-img .mob {
+        display: inline-block;
+        max-width: 100%;
+    }
+
+    .numbers-info-img .desc {
+        display: none;
+    }
+
+    .numbers-info {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .header-down-img .mob {
+        display: inline-block;
+    }
+
+    .header-down-img .desc {
+        display: none;
+    }
+
+    .header-down-img img {
+        max-width: 80%;
+    }
 }
 
 @media (max-width: 500px) {
     .advantages-wrap {
-        grid-template-columns: 80%;
-        gap: 30px;
-        justify-content: center;
+        row-gap: 20px;
+        column-gap: 10px;
     }
 }
 
 @media (max-width: 470px) {
     .main-header-text {
-        position: static;
-        margin-bottom: 40px;
-        width: 100%;
-        text-align: center;
+        margin-top: 50px;
     }
 
     .main-header-text img {
@@ -1856,10 +2140,39 @@ body {
 
     .main-header,
     .main-header .container {
-        height: 600px;
+        height: 460px;
     }
 
     .mobile-menu {
         width: 250px;
+    }
+
+    .main-header-text .desc,
+    .main-header::after {
+        display: none;
+    }
+
+    .main-header-text .mob {
+        position: relative;
+        z-index: 3;
+        display: inline-block;
+        width: 214px;
+    }
+
+    .main-header {
+        background: url(../img/main-header/mobile-main-bg.png) no-repeat center/cover;
+        background-color: #1C1D1C;
+    }
+
+    .title {
+        font-size: 33px !important;
+    }
+
+    .title span {
+        font-size: 30px !important;
+    }
+
+    .title-iandscaping {
+        font-size: 28px !important;
     }
 }

@@ -132,7 +132,10 @@ $(function () {
       }
     })
 
-    Fancybox.bind("[data-fancybox]", {
-      // Your custom options
-    });
+    const fancyBox = document.querySelectorAll('[data-fancybox]');
+    if(fancyBox.length > 0) {
+      Fancybox.bind("[data-fancybox]", {
+        // Your custom options
+      });
+    }
 })

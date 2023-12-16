@@ -5,72 +5,54 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Помещения</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
     <link rel="stylesheet" href="./css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="./css/fonts.css">
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
     <div class="content">
-        <section class="header premises-header">
+        <div class="main-menu">
             <div class="container">
-                <div class="main-header-top white">
+                <div class="main-header-top">
+                    <a href="./index.html" class="main-header-logo">
+                        <img src="./img/main-logo.svg" alt="">
+                    </a>
                     <ul class="main-header-nav">
                         <li>
-                            <a href="./projects.html" class="main-header-nav-link">О ПРОЕКТЕ</a>
+                            <a href="./projects.html" class="main-header-nav-link">О проекте</a>
                         </li>
                         <li>
-                            <a href="" class="main-header-nav-link">ВЫБРАТЬ КВАРТИРУ</a>
+                            <a href="" class="main-header-nav-link">Выбрать квартиру</a>
                         </li>
                         <li>
                             <a href="./gallery.html" class="main-header-nav-link">Коммерческие помещения</a>
                         </li>
                         <li>
-                            <a href="" class="main-header-nav-link">О НАС</a>
+                            <a href="" class="main-header-nav-link">О нас</a>
                         </li>
                         <li>
-                            <a href="./news.html" class="main-header-nav-link">НОВОСТИ</a>
+                            <a href="./news.html" class="main-header-nav-link">Новости</a>
                         </li>
                         <li>
-                            <a href="./premises.html" class="main-header-nav-link dropdown">ЕЩЁ</a>
+                            <a href="./premises.html" class="main-header-nav-link dropdown">Еще</a>
                         </li>
                     </ul>
-                    <a href="./index.html" class="main-header-logo desc">
-                        <img src="./img/main-logo-white.png" alt="">
-                    </a>
-                    <a href="./index.html" class="main-header-logo mob">
-                        <img src="./img/main-logo-white.svg" alt="">
-                    </a>
+
+                    <div class="main-header-nav-text">
+                        <img src="./img/main-header/main-headernav-text.svg" alt="">
+                    </div>
+
                     <a href="tel:+79219559553" class="main-header-tel">
                         +7 (921) 955-95-53
                     </a>
-                    <a href="" class="main-header-mail">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17" fill="none">
-                            <path d="M20.5 3.25V13.75C20.5 14.3467 20.2629 14.919 19.841 15.341C19.419 15.7629 18.8467 16 18.25 16H3.25C2.65326 16 2.08097 15.7629 1.65901 15.341C1.23705 14.919 1 14.3467 1 13.75V3.25M20.5 3.25C20.5 2.65326 20.2629 2.08097 19.841 1.65901C19.419 1.23705 18.8467 1 18.25 1H3.25C2.65326 1 2.08097 1.23705 1.65901 1.65901C1.23705 2.08097 1 2.65326 1 3.25M20.5 3.25V3.493C20.5 3.87715 20.4017 4.25491 20.2144 4.5903C20.0271 4.92569 19.7571 5.20754 19.43 5.409L11.93 10.024C11.5752 10.2425 11.1667 10.3582 10.75 10.3582C10.3333 10.3582 9.92479 10.2425 9.57 10.024L2.07 5.41C1.74292 5.20854 1.47287 4.92669 1.28557 4.5913C1.09827 4.25591 0.999957 3.87815 1 3.494V3.25" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                    </a>
-    
-                    <div class="header-mobile">
-                        <a href="" class="header-mobile-mail">
-                            <svg width="30" height="22" viewBox="0 0 30 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M8.0863 6.66895L15.1726 11.6294L22.2589 6.66895" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M1 18.0072V3.83453C1 2.26906 2.26906 1 3.83453 1H26.5107C28.0763 1 29.3453 2.26906 29.3453 3.83453V18.0072C29.3453 19.5727 28.0763 20.8417 26.5107 20.8417H3.83453C2.26906 20.8417 1 19.5727 1 18.0072Z" stroke="currentColor"/>
-                            </svg>
-                                
-                        </a>
-                        <a href="tel:+79219559553" class="header-mobile-tel">
-                            <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M17.8838 15.1149L13.5169 16.0016C10.5672 14.4501 8.74512 12.6679 7.68473 9.88985L8.50118 5.30035L6.95785 1H2.98042C1.78477 1 0.843242 2.03542 1.02181 3.27433C1.46761 6.36725 2.78205 11.9751 6.62434 16.0016C10.6593 20.2301 16.4708 22.0649 19.6693 22.7942C20.9044 23.0759 22 22.0662 22 20.7416V16.7586L17.8838 15.1149Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                                
-                        </a>
-                    </div>
                     
                     <a href="" class="header-bnt-menu">
-                        <svg width="25" height="23" viewBox="0 0 25 23" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M1 1H24" stroke="currentColor" stroke-width="1.12722" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M1 11.3174H24" stroke="currentColor" stroke-width="1.12722" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M1 21.6348H24" stroke="currentColor" stroke-width="1.12722" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="23" viewBox="0 0 25 23" fill="none">
+                            <path d="M1 1H24" stroke="white" stroke-width="1.12722" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 11.3174H24" stroke="white" stroke-width="1.12722" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 21.6348H24" stroke="white" stroke-width="1.12722" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
                     </a>
     
     
@@ -98,26 +80,27 @@
                         </li>
                     </ul>
                 </div>
-
+            </div>
+        </div>
+        <section class="header premises-header">
+            <div class="container">
                 <div class="header-middle-wrap">
-                    <div class="header-name-img">
-                        <img src="./img/header-name.svg" alt="">
-                    </div>
-                    <a href="" class="main-bnt w-400 anima-btn">
+                    <a href="" class="main-bnt w-336 anima-btn">
                         ВЫБРАТЬ КВАРТИРУ 
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="12" viewBox="0 0 26 12" fill="none">
-                            <path d="M26 6L16 0.226497V11.7735L26 6ZM0 7H17V5H0V7Z" fill="#403333"/>
-                        </svg>
+                    </a>
+                    <a href="" class="main-bnt w-336 anima-btn">
+                        коммерческие помещения
                     </a>
                 </div>
 
 
                 <div class="header-down">
-                    <a href="#first-scroll" class="header-down-btn scroll-to">
-                        <img src="./img/btn-down.svg" alt="">
-                    </a>
+                    <div class="header-name-img">
+                        <img src="./img/header-name.svg" alt="">
+                    </div>
                     <div class="header-down-img">
-                        <img src="./img/header-down-text.svg" alt="">
+                        <img class="desc" src="./img/header-down-text.svg" alt="">
+                        <img class="mob" src="./img/header-down-text-mob.svg" alt="">
                     </div>
                 </div>
             </div>
@@ -132,78 +115,242 @@
             </div>
         </div>
 
-        <div id="first-scroll" class="content-wrap">
-            <section class="premises">
-                <div class="title">помещения</div>
-                <div class="premises-list">
-                    <div class="premises-item">
-                        <div class="premises-item-about">
-                            <div class="subtitle">Заголовок</div>
-                            <div class="premises-item-text">
-                                <p>«Взлетная, 16» — малоэтажный комплекс класса ВЫСОКИЙ КОМФОРТ, расположенный во Всеволожске. Дом состоит из трех 5-ти этажных секций.Согласно графику строительства секция№1 сдается в первую очередь. Затем, с интервалом 4-6 месяцев сдаются остальные.</p>
-                                <p>Небольшое количество квартир с большим выбором качественных планировочныхрешений, обилие света и воздуха,свободный от машин двор с детскими площадками и детским садом, подземныйпаркинг, закрытая безопасная территория,собственная инфраструктура и авторский проект озеленения в стиле регулярного парка.</p>
-                                <p>Таким образом, уютный, камерный дом в окружении зелени стал воплощением идеального пространства для спокойной семейной жизни в созвучии с шаговой динамикой городского комфорта.</p>
-                            </div>
-                        </div>
-                        <div class="premises-item-img">
-                            <img src="./img/premises/premises-item.png" alt="">
-                        </div>
-                    </div>
-                    
-                    <div class="premises-item">
-                        <div class="premises-item-about">
-                            <div class="subtitle">Заголовок</div>
-                            <div class="premises-item-text">
-                                <p>«Взлетная, 16» — малоэтажный комплекс класса ВЫСОКИЙ КОМФОРТ, расположенный во Всеволожске. Дом состоит из трех 5-ти этажных секций.Согласно графику строительства секция№1 сдается в первую очередь. Затем, с интервалом 4-6 месяцев сдаются остальные.</p>
-                            </div>
-                            <div class="premises-item-title">Заголовок</div>
-                            <ul class="premises-item-list">
-                                <li>«Взлетная, 16» — малоэтажный комплекс класса</li>
-                                <li>«Взлетная, 16» — малоэтажный комплекс класса</li>
-                                <li>«Взлетная, 16» — малоэтажный комплекс класса «Взлетная, 16» — малоэтажный комплекс класса</li>
-                                <li>«Взлетная, 16» — малоэтажный комплекс класса</li>
-                            </ul>
-                        </div>
-                        <div class="premises-item-img">
-                            <img src="./img/premises/premises-item.png" alt="">
-                        </div>
-                    </div>
+        <section class="premises-general">
+            <div class="container">
+                <div class="title">Коммерческие помещения</div>
+                <div class="premises-general-img">
+                    <img src="./img/premises/general-plan.png" alt="">
+                </div>
+            </div>
+        </section>
 
-                    <div class="premises-item">
-                        <div class="premises-item-about">
-                            <div class="subtitle">Заголовок</div>
-                            <div class="premises-item-text">
-                                <p>«Взлетная, 16» — малоэтажный комплекс класса ВЫСОКИЙ КОМФОРТ, расположенный во Всеволожске. Дом состоит из трех 5-ти этажных секций.Согласно графику строительства секция№1 сдается в первую очередь. Затем, с интервалом 4-6 месяцев сдаются остальные.</p>
-                                <p>Небольшое количество квартир с большим выбором качественных планировочныхрешений, обилие света и воздуха,свободный от машин двор с детскими площадками и детским садом, подземныйпаркинг, закрытая безопасная территория,собственная инфраструктура и авторский проект озеленения в стиле регулярного парка.</p>
-                                <p>Таким образом, уютный, камерный дом в окружении зелени стал воплощением идеального пространства для спокойной семейной жизни в созвучии с шаговой динамикой городского комфорта.</p>
-                            </div>
+        <section class="premises-apartment">
+            <div class="container">
+                <div class="premises-apartment-list">
+                    <div class="premises-apartment-item">
+                        <div class="premises-apartment-item-top">
+                            <a href="./img/premises/ap-1.png" data-fancybox="plan" data-caption="1 корпус 219,45 м2">
+                                <img src="./img/premises/ap-1.png" alt="">
+                            </a>
                         </div>
-                        <div class="premises-item-img">
-                            <img src="./img/premises/premises-item.png" alt="">
+                        <div class="premises-apartment-item-bottom">
+                            <div class="premises-apartment-item-info">
+                                <div class="premises-apartment-item-title">219,45 м2</div>
+                                <div class="premises-apartment-item-text">П-1 ДДУ</div>
+                                <div class="premises-apartment-item-about">1 корпус</div>
+                            </div>
+                            <div class="premises-apartment-item-info-img">
+                                <img src="./img/premises/ap-for-1.png" alt="">
+                            </div>
                         </div>
                     </div>
-
-                    <div class="premises-item">
-                        <div class="premises-item-about">
-                            <div class="subtitle">Заголовок</div>
-                            <div class="premises-item-text">
-                                <p>«Взлетная, 16» — малоэтажный комплекс класса ВЫСОКИЙ КОМФОРТ, расположенный во Всеволожске. Дом состоит из трех 5-ти этажных секций.Согласно графику строительства секция№1 сдается в первую очередь. Затем, с интервалом 4-6 месяцев сдаются остальные.</p>
-                            </div>
-                            <div class="premises-item-title">Заголовок</div>
-                            <ul class="premises-item-list">
-                                <li>«Взлетная, 16» — малоэтажный комплекс класса</li>
-                                <li>«Взлетная, 16» — малоэтажный комплекс класса</li>
-                                <li>«Взлетная, 16» — малоэтажный комплекс класса «Взлетная, 16» — малоэтажный комплекс класса</li>
-                                <li>«Взлетная, 16» — малоэтажный комплекс класса</li>
-                            </ul>
+                    <div class="premises-apartment-item">
+                        <div class="premises-apartment-item-top">
+                            <a href="./img/premises/ap-2.png" data-fancybox="plan" data-caption="1 корпус 47,93 м2">
+                                <img src="./img/premises/ap-2.png" alt="">
+                            </a>
                         </div>
-                        <div class="premises-item-img">
-                            <img src="./img/premises/premises-item.png" alt="">
+                        <div class="premises-apartment-item-bottom">
+                            <div class="premises-apartment-item-info">
+                                <div class="premises-apartment-item-title">47,93 м2</div>
+                                <div class="premises-apartment-item-text">П-2</div>
+                                <div class="premises-apartment-item-about">1 корпус</div>
+                            </div>
+                            <div class="premises-apartment-item-info-img">
+                                <img src="./img/premises/ap-for-2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="premises-apartment-item">
+                        <div class="premises-apartment-item-top">
+                            <a href="./img/premises/ap-3.png" data-fancybox="plan" data-caption="2 корпус 64,25 м2">
+                                <img src="./img/premises/ap-3.png" alt="">
+                            </a>
+                        </div>
+                        <div class="premises-apartment-item-bottom">
+                            <div class="premises-apartment-item-info">
+                                <div class="premises-apartment-item-title">64,25 м2</div>
+                                <div class="premises-apartment-item-text">П-5</div>
+                                <div class="premises-apartment-item-about">2 корпус</div>
+                            </div>
+                            <div class="premises-apartment-item-info-img">
+                                <img src="./img/premises/ap-for-3.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="premises-apartment-item">
+                        <div class="premises-apartment-item-top">
+                            <a href="./img/premises/ap-4.png" data-fancybox="plan" data-caption="3 корпус 47,15 м2">
+                                <img src="./img/premises/ap-4.png" alt="">
+                            </a>
+                        </div>
+                        <div class="premises-apartment-item-bottom">
+                            <div class="premises-apartment-item-info">
+                                <div class="premises-apartment-item-title">47,15 м2</div>
+                                <div class="premises-apartment-item-text">П-6</div>
+                                <div class="premises-apartment-item-about">3 корпус</div>
+                            </div>
+                            <div class="premises-apartment-item-info-img">
+                                <img src="./img/premises/ap-for-4.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="premises-apartment-item">
+                        <div class="premises-apartment-item-top">
+                            <a href="./img/premises/ap-5.png" data-fancybox="plan" data-caption="3 корпус 62,50 м2">
+                                <img src="./img/premises/ap-5.png" alt="">
+                            </a>
+                        </div>
+                        <div class="premises-apartment-item-bottom">
+                            <div class="premises-apartment-item-info">
+                                <div class="premises-apartment-item-title">62,50 м2</div>
+                                <div class="premises-apartment-item-text">П-7</div>
+                                <div class="premises-apartment-item-about">3 корпус</div>
+                            </div>
+                            <div class="premises-apartment-item-info-img">
+                                <img src="./img/premises/ap-for-5.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="premises-apartment-item">
+                        <div class="premises-apartment-item-top">
+                            <a href="./img/premises/ap-6.png" data-fancybox="plan" data-caption="3 корпус 112,30 м2">
+                                <img src="./img/premises/ap-6.png" alt="">
+                            </a>
+                        </div>
+                        <div class="premises-apartment-item-bottom">
+                            <div class="premises-apartment-item-info">
+                                <div class="premises-apartment-item-title">112,30 м2</div>
+                                <div class="premises-apartment-item-text">П-8</div>
+                                <div class="premises-apartment-item-about">3 корпус</div>
+                            </div>
+                            <div class="premises-apartment-item-info-img">
+                                <img src="./img/premises/ap-for-6.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="premises-apartment-item">
+                        <div class="premises-apartment-item-top">
+                            <a href="./img/premises/ap-7.png" data-fancybox="plan" data-caption="3 корпус 68,91 м2">
+                                <img src="./img/premises/ap-7.png" alt="">
+                            </a>
+                        </div>
+                        <div class="premises-apartment-item-bottom">
+                            <div class="premises-apartment-item-info">
+                                <div class="premises-apartment-item-title">68,91 м2</div>
+                                <div class="premises-apartment-item-text">П-9</div>
+                                <div class="premises-apartment-item-about">3 корпус</div>
+                            </div>
+                            <div class="premises-apartment-item-info-img">
+                                <img src="./img/premises/ap-for-7.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="premises-apartment-item">
+                        <div class="premises-apartment-item-top">
+                            <a href="./img/premises/ap-8.png" data-fancybox="plan" data-caption="3 корпус 79,37 м2">
+                                <img src="./img/premises/ap-8.png" alt="">
+                            </a>
+                        </div>
+                        <div class="premises-apartment-item-bottom">
+                            <div class="premises-apartment-item-info">
+                                <div class="premises-apartment-item-title">79,37 м2</div>
+                                <div class="premises-apartment-item-text">П-10</div>
+                                <div class="premises-apartment-item-about">3 корпус</div>
+                            </div>
+                            <div class="premises-apartment-item-info-img">
+                                <img src="./img/premises/ap-for-8.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="premises-apartment-item">
+                        <div class="premises-apartment-item-top">
+                            <a href="./img/premises/ap-9.png" data-fancybox="plan" data-caption="2 корпус 46,86 м2">
+                                <img src="./img/premises/ap-9.png" alt="">
+                            </a>
+                        </div>
+                        <div class="premises-apartment-item-bottom">
+                            <div class="premises-apartment-item-info">
+                                <div class="premises-apartment-item-title">46,86 м2</div>
+                                <div class="premises-apartment-item-text">П-11</div>
+                                <div class="premises-apartment-item-about">2 корпус</div>
+                            </div>
+                            <div class="premises-apartment-item-info-img">
+                                <img src="./img/premises/ap-for-9.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="premises-apartment-item">
+                        <div class="premises-apartment-item-top">
+                            <a href="./img/premises/ap-10.png" data-fancybox="plan" data-caption="2 корпус 72,69 м2">
+                                <img src="./img/premises/ap-10.png" alt="">
+                            </a>
+                        </div>
+                        <div class="premises-apartment-item-bottom">
+                            <div class="premises-apartment-item-info">
+                                <div class="premises-apartment-item-title">72,69 м2</div>
+                                <div class="premises-apartment-item-text">П-12</div>
+                                <div class="premises-apartment-item-about">2 корпус</div>
+                            </div>
+                            <div class="premises-apartment-item-info-img">
+                                <img src="./img/premises/ap-for-10.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="premises-apartment-item">
+                        <div class="premises-apartment-item-top">
+                            <a href="./img/premises/ap-11.png" data-fancybox="plan" data-caption="1 корпус 47,40 м2">
+                                <img src="./img/premises/ap-11.png" alt="">
+                            </a>
+                        </div>
+                        <div class="premises-apartment-item-bottom">
+                            <div class="premises-apartment-item-info">
+                                <div class="premises-apartment-item-title">47,40 м2</div>
+                                <div class="premises-apartment-item-text">П-15</div>
+                                <div class="premises-apartment-item-about">1 корпус</div>
+                            </div>
+                            <div class="premises-apartment-item-info-img">
+                                <img src="./img/premises/ap-for-11.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="premises-apartment-item">
+                        <div class="premises-apartment-item-top">
+                            <a href="./img/premises/ap-12.png" data-fancybox="plan" data-caption="2 корпус 54,83 м2">
+                                <img src="./img/premises/ap-12.png" alt="">
+                            </a>
+                        </div>
+                        <div class="premises-apartment-item-bottom">
+                            <div class="premises-apartment-item-info">
+                                <div class="premises-apartment-item-title">54,83 м2</div>
+                                <div class="premises-apartment-item-text">П-13</div>
+                                <div class="premises-apartment-item-about">2 корпус</div>
+                            </div>
+                            <div class="premises-apartment-item-info-img">
+                                <img src="./img/premises/ap-for-12.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="premises-apartment-item">
+                        <div class="premises-apartment-item-top">
+                            <a href="./img/premises/ap-13.png" data-fancybox="plan" data-caption="1 корпус 47,42 м2">
+                                <img src="./img/premises/ap-13.png" alt="">
+                            </a>
+                        </div>
+                        <div class="premises-apartment-item-bottom">
+                            <div class="premises-apartment-item-info">
+                                <div class="premises-apartment-item-title">47,42 м2</div>
+                                <div class="premises-apartment-item-text">П-14</div>
+                                <div class="premises-apartment-item-about">1 корпус</div>
+                            </div>
+                            <div class="premises-apartment-item-info-img">
+                                <img src="./img/premises/ap-for-13.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </section>
-        </div>
+            </div>
+        </section>
 
         <section class="footer">
             <div class="container">
@@ -267,6 +414,7 @@
 
     <script src="./js/jquery-3.7.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>
