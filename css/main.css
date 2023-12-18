@@ -123,7 +123,7 @@ body {
 .main-header-nav-link {
     position: relative;
     padding: 0 0 3px 0;
-    font: 600 14px/1 'Montserrat', normal;
+    font: 400 14px/1 'Montserrat', normal;
     color: #FFF;
     transition: all .3s ease;
 }
@@ -155,9 +155,9 @@ body {
     content: ''; 
     position: absolute;
     right: 0; 
-    top: 5px;
-    border: 6px solid transparent;
-    border-top: 6px solid #FFF;
+    top: 6px;
+    border: 5px solid transparent;
+    border-top: 5px solid #FFF;
 }
 
 .main-header-nav-text {
@@ -166,7 +166,7 @@ body {
 
 .main-header-top.white .main-header-nav-link.dropdown::before {
     content: ''; 
-    border-top: 6px solid #FFFFFF;
+    border-top: 5px solid #FFFFFF;
 }
 
 .main-header-nav-link:hover {
@@ -1832,6 +1832,23 @@ body {
 
     .premises-apartment-list {
         row-gap: 25px;
+    }
+}
+
+@media (max-width: 1770px) and (max-height: 880px) {
+    .main-header-name img,
+    .main-header-text {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1770px) and (max-height: 810px) {
+    .main-header-name img {
+        max-width: 300px;
+    }
+    
+    .main-header-text {
+        display: none;
     }
 }
 
