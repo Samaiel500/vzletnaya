@@ -268,13 +268,6 @@ body {
     display: none;
 }
 
-.main-header-btn-down {
-    position: absolute;
-    z-index: 3;
-    left: 0;
-    bottom: 40px;
-}
-
 .header-bnt-menu,
 .header-mobile a {
     color: #403333;
@@ -599,7 +592,9 @@ body {
 }
 
 .swiper-slide-active .architect-slider-text,
-.swiper-slide-active .architect-slider-img  {
+.swiper-slide-active .architect-slider-img,
+.swiper-slide-active .architect-slider-mob-top,
+.swiper-slide-active .iandscaping-slider-mob-top  {
     opacity: 1;
 }
 
@@ -676,12 +671,19 @@ body {
     gap: 20px;
 }
 
+.architect-slider-mob-top {
+    opacity: 0;
+    display: none;
+    text-align: center;
+}
+
 .content-wrap.pt20 {
     padding: 240px 0 120px 0;
 }
 
 .iandscaping {
     padding: 110px 0 0 0;
+    background: #FAFAFA;
 }
 
 .iandscaping.swiper {
@@ -748,6 +750,11 @@ body {
     display: flex;
     align-items: center;
     gap: 20px;
+}
+
+.iandscaping-slider-mob-top {
+    display: none;
+    opacity: 0;
 }
 
 .footer {
@@ -822,7 +829,7 @@ body {
 }
 
 .footer-contacts-politic {
-    font: 400 11px/1.1 'Montserrat', normal;
+    font: 400 13px/1.1 'Montserrat', normal;
     margin: 15px 0 0 0;
     background: linear-gradient(90deg, #B08D46 0%, #EAD29E 35.41%, #A7833B 87.24%);
     background-clip: text;
@@ -831,7 +838,7 @@ body {
 }
 
 .footer-ritail {
-    font: 400 11px/1.1 'Montserrat', normal;
+    font: 400 13px/1.1 'Montserrat', normal;
     background: linear-gradient(90deg, #B08D46 0%, #EAD29E 35.41%, #A7833B 87.24%);
     background-clip: text;
     -webkit-background-clip: text;
@@ -1224,7 +1231,7 @@ body {
     align-items: center;
     justify-content: space-between;
     border-top: 1px solid #D9D9D9;
-    padding: 17px 5px 25px 31px;
+    padding: 17px 5px 25px 25px;
 }
 
 .plans-room-title {
@@ -1343,7 +1350,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 13px 10px 10px 35px;
+    padding: 13px 10px 10px 25px;
 }
 
 .premises-apartment-item-info {
@@ -1352,6 +1359,19 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
+}
+
+.premises-metric {
+    position: relative;
+    padding-right: 10px;
+}
+
+.premises-two {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 16px;
+
 }
 
 .premises-apartment-item-text {
@@ -1421,11 +1441,26 @@ body {
         width: 100%;
     }
 
+    .architect-slider-mob-top {
+        display: block;
+    }
+
+    .architect-slider-text-img.mob {
+        text-align: center;
+        display: inline-block;
+        margin: 10px 0 10px 0 ;
+    }
+
+    .architect-slider-text-img.mob img {
+        max-width: 90%;
+    }
+
     .title.mob {
         display: block;
     }
 
-    .title.desc {
+    .title.desc,
+    .architect-slider-text-img {
         display: none;
     }
 
@@ -1442,10 +1477,6 @@ body {
         margin: 25px 0 0 0;
     }
 
-    .architect-slider-text-img {
-        margin: 0 0 40px 0;
-    }
-
     .iandscaping-slider-img {
         order: -1;
     }
@@ -1455,8 +1486,15 @@ body {
         margin-top: 20px;
     }
 
+    .iandscaping-slider-mob-top {
+        display: block;
+        order: -1;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
     .content-wrap.pt20 {
-        padding: 100px 0;
+        padding: 40px 0;
     }
 }
 
@@ -1565,10 +1603,6 @@ body {
 
     .main-header-text img {
         width: 400px;
-    }
-
-    .main-header-btn-down img {
-        width: 70px;
     }
 
     .advantages-wrap {
@@ -1790,24 +1824,6 @@ body {
         padding: 55px 0 30px 0;
     }
 
-    .architect-slider-text-img {
-        display: none;
-    }
-
-    .architect-slider-text-img.mob {
-        text-align: center;
-        display: inline-block;
-        margin: 10px 0 0 0 ;
-    }
-
-    .architect-slider-text-img.mob img {
-        max-width: 90%;
-    }
-
-    .title-architect {
-        text-align: center;
-    }
-
     .plans-text,
     .plans-room-num {
         font-size: 17px;
@@ -1833,6 +1849,11 @@ body {
     .premises-apartment-list {
         row-gap: 25px;
     }
+
+    .title-iandscaping {
+        text-align: left;
+        padding-left: 20px;
+    }
 }
 
 @media (max-width: 1770px) and (max-height: 880px) {
@@ -1846,10 +1867,6 @@ body {
     .main-header-name img {
         max-width: 300px;
     }
-    
-    .main-header-text {
-        display: none;
-    }
 }
 
 @media (max-width: 1280px) and (max-height: 880px) {
@@ -1860,24 +1877,8 @@ body {
 }
 
 @media (max-width: 1200px) and (max-height: 670px) {
-    .main-header-text {
-        display: none;
-    }
-
     .main-header-name img {
         max-width: 300px;
-    }
-}
-
-@media (max-width: 1091px) and (max-height: 880px) {
-    .main-header-name img {
-        margin-top: 20px;
-        max-width: 400px;
-    }
-
-    .main-header-text,
-    .header-btn-wrap {
-        margin-top: 20px;
     }
 }
 
@@ -1895,10 +1896,13 @@ body {
     }
 }
 
-
-@media (max-width: 991px) and (max-height: 360px) {
-    .main-header-btn-down {
+@media (max-width: 991px) and (max-height: 430px) {
+    .main-header-name-wrap {
         display: none;
+    }
+
+    .header-btn-wrap {
+        margin-top: 20px;
     }
 }
 
@@ -1907,9 +1911,9 @@ body {
         font-size: 35px !important;
     }
 
-    .main-header-btn-down,
     .main-header-text.desc,
-    .main-header-name {
+    .main-header-name,
+    .location-map {
         display: none;
     }
 
@@ -2041,6 +2045,14 @@ body {
         width: 38px;
         height: 2px;
         background: linear-gradient(90deg, #B08D46 0%, #EAD29E 35.41%, #A7833B 87.24%);
+    }
+
+    .footer-menu-list:nth-child(3) {
+        order: 4;
+    }
+
+    .footer-menu-list:last-child {
+        order: 3;
     }
 
     .header-down-img img {
@@ -2224,5 +2236,10 @@ body {
 
     .title-iandscaping {
         font-size: 28px !important;
+    }
+
+    .premises-apartment-item-info-img img,
+    .plans-room--info-img img {
+        max-width: 180px;
     }
 }
