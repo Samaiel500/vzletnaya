@@ -1455,6 +1455,10 @@ body {
         max-width: 90%;
     }
 
+    .architect-slider-img::before {
+        display: none;
+    }
+
     .title.mob {
         display: block;
     }
